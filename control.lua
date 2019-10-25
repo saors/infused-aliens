@@ -115,28 +115,25 @@ end)
 
 script.on_event(defines.events.on_entity_died, function(event)
     local ent = event.entity
-    if  ent.name == 'irradiated-small-biter' then
+    if  ent.name == 'irradiated-small-biter' or ent.name == 'irradiated-small-spitter'  then
         release_radiation(ent, 1)
-    elseif ent.name == 'irradiated-medium-biter' then
+    elseif ent.name == 'irradiated-medium-biter' or ent.name == 'irradiated-medium-spitter' then
         release_radiation(ent, 2)
-    elseif ent.name == 'irradiated-big-biter' then
+    elseif ent.name == 'irradiated-big-biter' or ent.name == 'irradiated-big-spitter' then
         release_radiation(ent, 3)
-    elseif ent.name == 'irradiated-behemoth-biter' then
+    elseif ent.name == 'irradiated-behemoth-biter' or ent.name == 'irradiated-behemoth-spitter' then
         release_radiation(ent, 4)
     elseif string.match(ent.name, 'spawner') and string.match(ent.name, 'irradiated') then
         release_radiation(ent, 4)
     end
     
-    if  ent.name == 'polluting-small-biter' then
+    if  ent.name == 'polluting-small-biter' or ent.name == 'polluting-small-spitter' then
         release_pollution(ent, 50)
-    elseif
-        ent.name == 'polluting-medium-biter' then
+    elseif ent.name == 'polluting-medium-biter' or ent.name == 'polluting-medium-spitter' then
             release_pollution(ent, 250)
-    elseif
-        ent.name == 'polluting-big-biter' then
+    elseif ent.name == 'polluting-big-biter' or ent.name == 'polluting-big-spitter'  then
             release_pollution(ent, 500)
-    elseif
-        ent.name == 'polluting-behemoth-biter' then
+    elseif ent.name == 'polluting-behemoth-biter' or ent.name == 'polluting-behemoth-spitter' then
             release_pollution(ent, 5000)
     elseif string.match(ent.name, 'spawner') and string.match(ent.name, 'polluting') then
         release_pollution(ent, 2000)
