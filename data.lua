@@ -1,0 +1,5 @@
+require ("prototypes.biter_units")
+require ("prototypes.biter_spawners")
+require ("prototypes.spitter_units")
+require ("prototypes.spitter_spawners")
+require ("prototypes.radiation")
