@@ -3,6 +3,16 @@ local replaces = {
     ['spitter-spawner']=true
 }
 
+local function check_spawner_type_exists(type)
+    local prototype_spawners = game.get_filtered_entity_prototypes{ {filter="type", type="unit-spawner"} }
+    for _, spawner in pairs(prototype_spawners) do
+      if string.find(spawner.name, type) then
+        return true
+      end
+    end
+    return false
+end
+
 local function replace_vanilla_spawner(spawner, buff_string)
     local oldSpawner=spawner
     local oldSpawnerName=oldSpawner.name
@@ -16,8 +26,10 @@ local function replace_vanilla_spawner(spawner, buff_string)
     local surface=oldSpawner.surface
     local force=oldSpawner.force
     local newName=buff_string.."_"..spawner_type
-    oldSpawner.destroy()   
-    local newSpawner=surface.create_entity({name=newName, position=position, force=force})
+    if check_spawner_type_exists(newName) then
+        oldSpawner.destroy()   
+        local newSpawner=surface.create_entity({name=newName, position=position, force=force})
+    end
 end
 
 local function get_buffs(ores)
