@@ -3,18 +3,18 @@ entitiesToBeGenerated={}
 buff_matrix={
   "polluting",
   "polluting_hardened",
-  "polluting_irradiated",
+  "polluting_radioactive",
   "polluting_sharpened",
-  "polluting_hardened_irradiated",
-  "polluting_irradiated_sharpened",
+  "polluting_hardened_radioactive",
+  "polluting_radioactive_sharpened",
   "polluting_hardened_sharpened",
-  "polluting_hardened_irradiated_sharpened",
+  "polluting_hardened_radioactive_sharpened",
   "hardened",
-  "hardened_irradiated",
+  "hardened_radioactive",
   "hardened_sharpened",
-  "hardened_irradiated_sharpened",
-  "irradiated",
-  "irradiated_sharpened",
+  "hardened_radioactive_sharpened",
+  "radioactive",
+  "radioactive_sharpened",
   "sharpened",
 }
 
@@ -136,7 +136,7 @@ local function determine_spawner_resistances(buffs)
     if(value == "hardened") then
       resistances[1].percent = 98
     end
-    if(value == "irradiated") then
+    if(value == "radioactive") then
     end
     if(value == "sharpened") then
     end
@@ -153,11 +153,11 @@ local function setSpawnerUnits(buffs)
       table.insert( units, {"sharpened-big-spitter", {{0.5, 0.0}, {1.0, 0.4}}} )
       table.insert( units, {"sharpened-behemoth-spitter", {{0.9, 0.0}, {1.0, 0.3}}}) 
     end
-    if(value == "irradiated") then
-      table.insert( units, {"irradiated-small-spitter", {{0.0, 0.3}, {0.6, 0.0}}} )
-      table.insert( units, {"irradiated-medium-spitter", {{0.2, 0.0}, {0.6, 0.3}, {0.7, 0.1}}})
-      table.insert( units, {"irradiated-big-spitter", {{0.5, 0.0}, {1.0, 0.4}}} )
-      table.insert( units, {"irradiated-behemoth-spitter", {{0.9, 0.0}, {1.0, 0.3}}} )
+    if(value == "radioactive") then
+      table.insert( units, {"radioactive-small-spitter", {{0.0, 0.3}, {0.6, 0.0}}} )
+      table.insert( units, {"radioactive-medium-spitter", {{0.2, 0.0}, {0.6, 0.3}, {0.7, 0.1}}})
+      table.insert( units, {"radioactive-big-spitter", {{0.5, 0.0}, {1.0, 0.4}}} )
+      table.insert( units, {"radioactive-behemoth-spitter", {{0.9, 0.0}, {1.0, 0.3}}} )
     end
     if(value == "hardened") then
       table.insert( units, {"hardened-small-spitter", {{0.0, 0.3}, {0.6, 0.0}}} )
@@ -182,8 +182,8 @@ local function generateLocale(buffs)
       locale.name = "Sharpened "..locale.name
       locale.description = locale.description.." sharpened"
     end
-    if(value == "irradiated") then
-      locale.name = "Irradiated "..locale.name
+    if(value == "radioactive") then
+      locale.name = "Radioactive "..locale.name
       locale.description = locale.description.." iradiated"
     end
     if(value == "hardened") then

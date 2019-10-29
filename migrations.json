@@ -1,0 +1,22 @@
+{
+  "entity":
+  [
+    ["flammable_irradiated_biter_spawner", "polluting_radioactive_biter_spawner"],
+    ["flammable_hardened_irradiated_biter_spawner", "polluting_hardened_radioactive_biter_spawner"],
+    ["flammable_irradiated_sharpened_biter_spawner", "polluting_radioactive_sharpened_biter_spawner"],
+    ["flammable_hardened_irradiated_sharpened_biter_spawner", "polluting_hardened_radioactive_sharpened_biter_spawner"],
+    ["hardened_irradiated_biter_spawner", "hardened_radioactive_biter_spawner"],
+    ["hardened_irradiated_sharpened_biter_spawner", "hardened_radioactive_sharpened_biter_spawner"],
+    ["irradiated_biter_spawner", "radioactive_biter_spawner"],
+    ["irradiated_sharpened_biter_spawner", "radioactive_sharpened_biter_spawner"],
+
+    ["flammable_irradiated_spitter_spawner", "polluting_radioactive_spitter_spawner"],
+    ["flammable_hardened_irradiated_spitter_spawner", "polluting_hardened_radioactive_spitter_spawner"],
+    ["flammable_irradiated_sharpened_spitter_spawner", "polluting_radioactive_sharpened_spitter_spawner"],
+    ["flammable_hardened_irradiated_sharpened_spitter_spawner", "polluting_hardened_radioactive_sharpened_spitter_spawner"],
+    ["hardened_irradiated_spitter_spawner", "hardened_radioactive_spitter_spawner"],
+    ["hardened_irradiated_sharpened_spitter_spawner", "hardened_radioactive_sharpened_spitter_spawner"],
+    ["irradiated_spitter_spawner", "radioactive_spitter_spawner"],
+    ["irradiated_sharpened_spitter_spawner", "radioactive_sharpened_spitter_spawner"]
+  ]
+}

@@ -1,7 +1,7 @@
-buffs = {"polluting","hardened","irradiated","sharpened"}
+buffs = {"polluting","hardened","radioactive","sharpened"}
 polluting_tint = {r=0.96, g=0.1, b=0.1, a=0.87}
 hardened_tint = {r=0.92, g=0.48, b=0.29, a=0.87}
-irradiated_tint = {r=0.1, g=0.96, b=0.1, a=0.87}
+radioactive_tint = {r=0.1, g=0.96, b=0.1, a=0.87}
 sharpened_tint = {r=0.1, g=0.96, b=0.96, a=0.87}
 smallbiterscale = 0.5
 mediumbiterscale = 0.7
@@ -208,8 +208,8 @@ local function generate_locale(buff, size)
         locale.name = size.."Sharpened "..locale.name
         locale.description = locale.description.." with very sharp claws"
     end
-    if(buff == "irradiated") then
-        locale.name = size.."Irradiated "..locale.name
+    if(buff == "radioactive") then
+        locale.name = size.."Radioactive "..locale.name
         locale.description = locale.description.." with a strange glow"
     end
     if(buff == "hardened") then
@@ -230,8 +230,8 @@ local function get_buffed_attack_params(scale, base_params, buff)
         params.damage_modifier=2
         params.animation=biterattackanimation(scale, sharpened_tint, sharpened_tint)
     end
-    if(buff == "irradiated") then
-        params.animation=biterattackanimation(scale, irradiated_tint, irradiated_tint)
+    if(buff == "radioactive") then
+        params.animation=biterattackanimation(scale, radioactive_tint, radioactive_tint)
     end
     if(buff == "hardened") then
         params.animation=biterattackanimation(scale, hardened_tint, hardened_tint)
@@ -271,8 +271,8 @@ local function get_run_animation(scale, buff)
     if(buff == "sharpened") then
         return biterrunanimation(scale, sharpened_tint, sharpened_tint)
     end 
-    if(buff == "irradiated") then
-        return biterrunanimation(scale, irradiated_tint, irradiated_tint)
+    if(buff == "radioactive") then
+        return biterrunanimation(scale, radioactive_tint, radioactive_tint)
     end
     if(buff == "hardened") then
         return biterrunanimation(scale, hardened_tint, hardened_tint)
