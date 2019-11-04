@@ -1,4 +1,7 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Fixed sharpened units being too strong
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
   Refactored Prototype generation, allowing for every combination of buff on both the units and the spawners!
   Reduced filesize by reusing base game assets
