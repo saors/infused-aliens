@@ -20,7 +20,7 @@ function radiation_util.create_radiation_pictures(opts)
   local retval =
   {
     {
-      filename = "__infused_aliens__/graphics/fire-flame-13.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-13.png",
       line_length = 8,
       width = 60,
       height = 118,
@@ -35,7 +35,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { -0.0390625, -0.90625 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-12.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-12.png",
       line_length = 8,
       width = 63,
       height = 116,
@@ -50,7 +50,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { -0.015625, -0.914065 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-11.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-11.png",
       line_length = 8,
       width = 61,
       height = 122,
@@ -65,7 +65,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { -0.0078125, -0.90625 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-10.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-10.png",
       line_length = 8,
       width = 65,
       height = 108,
@@ -80,7 +80,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { -0.0625, -0.64844 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-09.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-09.png",
       line_length = 8,
       width = 64,
       height = 101,
@@ -95,7 +95,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { -0.03125, -0.695315 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-08.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-08.png",
       line_length = 8,
       width = 50,
       height = 98,
@@ -110,7 +110,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { -0.0546875, -0.77344 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-07.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-07.png",
       line_length = 8,
       width = 54,
       height = 84,
@@ -125,7 +125,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { 0.015625, -0.640625 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-06.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-06.png",
       line_length = 8,
       width = 65,
       height = 92,
@@ -140,7 +140,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { 0, -0.83594 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-05.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-05.png",
       line_length = 8,
       width = 59,
       height = 103,
@@ -155,7 +155,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { 0.03125, -0.882815 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-04.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-04.png",
       line_length = 8,
       width = 67,
       height = 130,
@@ -170,7 +170,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { 0.015625, -1.109375 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-03.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-03.png",
       line_length = 8,
       width = 74,
       height = 117,
@@ -185,7 +185,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { 0.046875, -0.984375 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-02.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-02.png",
       line_length = 8,
       width = 74,
       height = 114,
@@ -200,7 +200,7 @@ function radiation_util.create_radiation_pictures(opts)
       shift = { 0.0078125, -0.96875 }
     },
     {
-      filename = "__infused_aliens__/graphics/fire-flame-01.png",
+      filename = "__base__/graphics/entity/fire-flame/fire-flame-01.png",
       line_length = 8,
       width = 66,
       height = 119,

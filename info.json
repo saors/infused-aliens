@@ -1,7 +1,8 @@
 {
     "name": "infused_aliens",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "title": "Infused Aliens",
     "author": "saors",
-    "factorio_version": "0.17"
+    "factorio_version": "0.17",
+		"dependencies": ["infused_aliens_functions"]
   }

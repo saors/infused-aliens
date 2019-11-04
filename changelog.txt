@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Refactored Prototype generation, allowing for every combination of buff on both the units and the spawners!
+  Reduced filesize by reusing base game assets
+  Now requires utility mod also be installed!
+---------------------------------------------------------------------------------------------------
 Version: 1.0.3
   Actually catch spawner type not being found. Also renamed spawners and biters/spitters
   Renamed enemies will be removed from saves, spawners have been migrated

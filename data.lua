@@ -1,5 +1,4 @@
-require ("prototypes.biter_units")
-require ("prototypes.biter_spawners")
-require ("prototypes.spitter_units")
-require ("prototypes.spitter_spawners")
+require("__infused_aliens_functions__.data.functions")
+
+require ("prototypes.infused_entities")
 require ("prototypes.radiation")
