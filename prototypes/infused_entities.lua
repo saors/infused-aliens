@@ -187,7 +187,7 @@ local function apply_custom_attributes(key, buff)
     tint = sharpened_tint
     templates[key]["buff_value"]["modifications"]["attack_parameters"] = {}
     for k,unit in pairs(vanilla_units) do
-      dmg_mod = 1.25* (12 * math.ceil(k/2)) --12 is base dmg mod for vanilla units, this makes the dmg mod 25% stronger
+      dmg_mod = 1.25 * (math.ceil(k/2)) --12 is base dmg mod for vanilla units, this makes the dmg mod 25% stronger
       templates[key]["buff_value"]["modifications"]["attack_parameters"][unit] = {}
       templates[key]["buff_value"]["modifications"]["attack_parameters"][unit]["damage_modifier"] = {}
       templates[key]["buff_value"]["modifications"]["attack_parameters"][unit]["damage_modifier"]= dmg_mod
