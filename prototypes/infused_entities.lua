@@ -155,11 +155,11 @@ local function set_spawner_color(unit, template, color)
   }
 end
 
-local function turn_off_autoplace(unit, template)
+local function turn_off_autoplace(spawner, template)
   if(not template["autoplace"]) then
     template["autoplace"] = {}
   end
-  template["autoplace"][unit] = nil
+  template["autoplace"][spawner] = "nil"
 end
 
 

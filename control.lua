@@ -12,33 +12,31 @@ infused_aliens_replaces = {
     ['spitter-spawner']=true
 }
 
-local function check_spawner_type_exists(type)
-  local prototype_spawners = game.get_filtered_entity_prototypes{ {filter="type", type="unit-spawner"} }
-  for _, spawner in pairs(prototype_spawners) do
-    if string.find(spawner.name, type) then
-      return true
-    end
-  end
-  return false
-end
+-- local function check_spawner_type_exists(type)
+--   local prototype_spawners = game.get_filtered_entity_prototypes{ {filter="type", type="unit-spawner"} }
+--   for _, spawner in pairs(prototype_spawners) do
+--     if string.find(spawner.name, type) then
+--       return true
+--     end
+--   end
+--   return false
+-- end
 
 local function replace_vanilla_spawner(spawner, buff_string)
   local oldSpawner=spawner
   local oldSpawnerName=oldSpawner.name
   local spawner_type=""
   if oldSpawnerName == "biter-spawner" then
-    spawner_type="biter_spawner"
+    spawner_type="biter-spawner"
   elseif oldSpawnerName == "spitter-spawner" then
-    spawner_type="spitter_spawner"
+    spawner_type="spitter-spawner"
   end
   local position=oldSpawner.position
   local surface=oldSpawner.surface
   local force=oldSpawner.force
-  local newName=buff_string.."_"..spawner_type
-  if check_spawner_type_exists(newName) then
-    oldSpawner.destroy()   
-    local newSpawner=surface.create_entity({name=newName, position=position, force=force})
-  end
+  local newName=buff_string.."-"..spawner_type
+  oldSpawner.destroy()   
+  local newSpawner=surface.create_entity({name=newName, position=position, force=force})
 end
 
 local function get_buffs(ores)
@@ -58,14 +56,18 @@ local function get_buffs(ores)
 end
 
 local function create_buff_string(buffs)
-  buff_string = ""
-  table.sort(buffs)
+  local buff_array = {}
   for key, buff in pairs(buffs) do
-    if buffs[key] then
+    table.insert(buff_array, key)
+  end
+  buff_string = ""
+  table.sort(buff_array)
+  for _, buff in pairs(buff_array) do
+    if buffs[buff] then
       if(string.len(buff_string) < 1) then
-        buff_string = key
+        buff_string = buff
       else
-        buff_string = buff_string.."_"..key
+        buff_string = buff_string.."-"..buff
       end
     end
   end
@@ -103,7 +105,7 @@ local function get_overlapping_ores(entity)
   matchedResources = surface.find_entities_filtered{area=bounding_box,type="resource"}
   if isTableEmpty(matchedResources) == false then
     for key, value in pairs(matchedResources) do --value may be array
-      overlapping_ores [#overlapping_ores + 1] = value
+      table.insert(overlapping_ores, value)
     end
   end
   return overlapping_ores
